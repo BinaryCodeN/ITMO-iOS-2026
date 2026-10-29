@@ -1,0 +1,6 @@
+.DS_Store
+DerivedData/
+xcuserdata/
+*.xcuserstate
+Lab6/RecipeBook/RecipeBookTests/
+Lab6/RecipeBook/RecipeBookUITests/
