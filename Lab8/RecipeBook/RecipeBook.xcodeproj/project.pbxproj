@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5729EFD530939E0200477715 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5729EFD430939DF000477715 /* .gitignore */; };
+		577AC406309EC02300D3ABAE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 577AC405309EC02300D3ABAE /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		5720522B306471D7006672B0 /* RecipeBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57205235306471D7006672B0 /* RecipeBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5729EFD430939DF000477715 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		577AC405309EC02300D3ABAE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -80,6 +82,7 @@
 		57205215306471D2006672B0 = {
 			isa = PBXGroup;
 			children = (
+				577AC405309EC02300D3ABAE /* .swiftlint.yml */,
 				5729EFD430939DF000477715 /* .gitignore */,
 				57205220306471D2006672B0 /* RecipeBook */,
 				5720522E306471D7006672B0 /* RecipeBookTests */,
@@ -108,6 +111,7 @@
 				5720521A306471D2006672B0 /* Sources */,
 				5720521B306471D2006672B0 /* Frameworks */,
 				5720521C306471D2006672B0 /* Resources */,
+				577AC407309EC13400D3ABAE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -218,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				577AC406309EC02300D3ABAE /* .swiftlint.yml in Resources */,
 				5729EFD530939E0200477715 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +242,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		577AC407309EC13400D3ABAE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f \"/usr/local/bin/swiftlint\" ]; then\n    /usr/local/bin/swiftlint\nelse\n    echo \"warning: SwiftLint not found at /usr/local/bin/swiftlint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5720521A306471D2006672B0 /* Sources */ = {
@@ -403,6 +429,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -434,6 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

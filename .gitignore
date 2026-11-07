@@ -5,8 +5,10 @@ xcuserdata/
 
 **/RecipeBookTests/
 **/RecipeBookUITests/
+**/.swiftlint.yml
 
 !Lab7/**/RecipeBookTests/
 !Lab7/**/RecipeBookUITests/
 !Lab8/**/RecipeBookTests/
 !Lab8/**/RecipeBookUITests/
+!Lab8/**/.swiftlint.yml
